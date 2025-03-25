@@ -20,8 +20,8 @@ Supported filters:
 Dependencies management is done using [uv](https://github.com/astral-sh/uv). You can create the same virtual environment using the following commands in the root directory (after installing `uv`):
 ```sh
 uv venv --python 3.10
-.venv/Scripts/activate      # Windows
-source .venv/Scripts/activate   # Linux / MacOS
+.venv/Scripts/activate              # Windows
+source .venv/Scripts/activate       # Linux / MacOS
 uv pip install -r pyproject.toml
 ```
 
@@ -49,7 +49,7 @@ There are 3 main directories in this project:
 
 ## Usage
 
-1. Scraping
+### 1. Scraping
 
 To start the script, you need to run the `core/main.py` file.
 Using the uv manager, you can use the following command, that will also read the .env variables:
@@ -82,7 +82,7 @@ Each of them will generate two files:
 Displaying and real-time filtering can be done using the webview.
 
 
-2. Web view
+### 2. Web view
 
 The webview is very basic (plain HTML/CSS/JS), but sufficient to browse one or more potential large JSON files of scraped data.
 But because the JavaScript must read local files, you need to start a local server to bypass CORS restrictions.
