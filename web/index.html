@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmiAmi Advanced Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>AmiAmi advanced search</h1>
+
+        <input type="text" id="searchInput"
+            placeholder="Search for a name, gcode, scode, JAN code, tag, maker, modeler or description"
+            class="search-bar">
+        <p>Total items: <span id="itemsCount">0</span></p>
+
+        <!-- Filters -->
+        <div id="filters">
+            <div class="filter-group">
+                <h3>Item details filters</h3>
+                <label><input type="checkbox" name="item_bool_details" value="is_preowned"> Pre-owned</label>
+                <label><input type="checkbox" name="item_bool_details" value="is_preorder"> Pre-order</label>
+                <label><input type="checkbox" name="item_bool_details" value="is_backorder"> Back-order</label>
+                <label><input type="checkbox" name="item_bool_details" value="has_store_bonus"> w/ Store Bonus</label>
+                <label><input type="checkbox" name="item_bool_details" value="is_amiami_limited"> Amiami Limited</label>
+                <label><input type="checkbox" name="item_bool_details" value="is_age_limited"> Age Limited</label>
+                <label><input type="checkbox" name="item_bool_details" value="has_preorder_bonus"> w/ Preorder
+                    Bonus</label>
+                <label><input type="checkbox" name="item_bool_details" value="is_on_sale"> On Sale</label>
+                <label><input type="checkbox" name="item_bool_details" value="is_preowned_sale"> Preowned Sale</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Item condition filters</h3>
+                <label><input type="checkbox" name="item_condition" value="" checked> New</label>
+                <label><input type="checkbox" name="item_condition" value="A" checked> A</label>
+                <label><input type="checkbox" name="item_condition" value="A-"> A-</label>
+                <label><input type="checkbox" name="item_condition" value="B+"> B+</label>
+                <label><input type="checkbox" name="item_condition" value="B"> B</label>
+                <label><input type="checkbox" name="item_condition" value="C"> C</label>
+                <label><input type="checkbox" name="item_condition" value="J"> J</label>
+            </div>
+
+            <div class="filter-group">
+                <h3>Box condition filters</h3>
+                <label><input type="checkbox" name="box_condition" value=""> New</label>
+                <label><input type="checkbox" name="box_condition" value="A"> A</label>
+                <label><input type="checkbox" name="box_condition" value="B"> B</label>
+                <label><input type="checkbox" name="box_condition" value="C"> C</label>
+                <label><input type="checkbox" name="box_condition" value="N"> N</label>
+            </div>
+
+
+            <div class="filter-group">
+                <h3>Price filters (in €)</h3>
+                <label for="minPrice">Price Min:</label>
+                <input type="number" id="minPrice" placeholder="Min" min="0" max="10000" step="any" value="0.001">
+
+                <label for="maxPrice">Price Max:</label>
+                <input type="number" id="maxPrice" placeholder="Max" min="0" max="10000" step="any" value="200">
+            </div>
+        </div>
+
+        <!-- Data table -->
+        <table id="itemsTable">
+            <thead>
+                <tr>
+                    <th id="indexColumn">Index</th>
+                    <th id="imgColumn">Image</th>
+                    <th id="nameColumn" class="sortable" data-column="name">Name</th>
+                    <th id="codeColumn">gcode / scode</th>
+                    <th id="priceColumn" class="sortable" data-column="price">Price</th>
+                    <th id="statusColumn">Status</th>
+                    <th id="releaseColumn" class="sortable" data-column="release_date">Release date</th>
+                    <th id="jancodeColumn">JAN Code</th>
+                    <th id="conditionColumn" class="sortable" data-column="item_condition">Item condition</th>
+                </tr>
+            </thead>
+            <tbody id="itemsTableBody">
+                <!-- Insert data here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
