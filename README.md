@@ -27,7 +27,7 @@ source .venv/Scripts/activate       # Linux / MacOS
 uv pip install -r pyproject.toml
 ```
 
-Note: If not already installed, you can also download Python 3.10 using `uv` with the following command:
+> Note: If not already installed, you can also download Python 3.10 using `uv` with the following command:
 ```sh
 uv python install 3.10
 ```
@@ -38,7 +38,7 @@ uv python install 3.10
 
 This project uses a .env file to centralize project variables. Currently, you don't need to add any credentials to run the project, so you only have to copy and rename the `.env.default` file to `.env`.
 
-Note: You can also change there the number of items crawled per page, with the *ITEMS_PER_PAGE* variable.
+> Note: You can also change there the number of items crawled per page, with the *ITEMS_PER_PAGE* variable.
 
 
 ## Architecture
