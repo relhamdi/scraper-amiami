@@ -4,6 +4,8 @@ Scraping process for the website AmiAmi.
 
 Created to ease the browsing experience in AmiAmi, this repo contains the scraping part to retrieve wanted tags or categories from the website, as well as a basic webpage, that will read scraped data and allow more precise search in it.
 
+![webview](assets/img/webview.png)
+
 Supported filters:
 - Query search on name, gcode/scode, JAN code, tags, maker, modeler and description
 - Name, price, release date and item condition sorting
