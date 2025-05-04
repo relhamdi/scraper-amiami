@@ -34,6 +34,7 @@ class AmiAmiScraper:
     def __init__(
         self,
         always_scrap_details: bool = False,
+        stop_on_429: bool = True,
         extra_headers: Optional[Dict[str, str]] = None,
     ):
         """
@@ -43,10 +44,14 @@ class AmiAmiScraper:
             always_scrap_details (bool, optional): If True, scrap item details to get more data.
                 Note: Always the case for pre-owned items.
                 Defaults to False.
+            stop_on_429 (bool, optional): If True, will stop the program if an error 429 occurs.
+                Note: The other case will result on items enriched with only basic crawled data.
+                Defaults to True.
             extra_headers (Optional[Dict[str, str]], optional): Extra request headers.
                 Defaults to None.
         """
         self.always_scrap_details = always_scrap_details
+        self.stop_on_429 = stop_on_429
         self.headers = {
             "X-User-Key": AMIAMI_USER_KEY,
             "User-Agent": AMIAMI_USER_AGENT,
@@ -228,7 +233,7 @@ class AmiAmiScraper:
         try:
             response = self._crawl_item_details(code, code_type)
         except Exception as e:
-            if "429" in str(e):
+            if "429" in str(e) and self.stop_on_429:
                 raise Exception("HTTP 429, try again later")
             print(e)
             return results
