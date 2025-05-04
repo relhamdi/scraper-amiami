@@ -1,6 +1,5 @@
 from json import load as json_load
 from os.path import exists, join
-from random import uniform as rand_uniform
 from re import search as re_search
 from time import sleep
 from typing import Dict, List, Optional, Tuple
@@ -56,6 +55,8 @@ class AmiAmiScraper:
         }
         if extra_headers is not None:
             self.headers.update(extra_headers)
+        self.crawl_sleep_time = 1
+        self.scrap_sleep_time = 1.5
 
     def _crawl_items_on_page(
         self,
@@ -134,7 +135,7 @@ class AmiAmiScraper:
                 break
 
             page += 1
-            sleep(rand_uniform(0, 2))
+            sleep(self.crawl_sleep_time)
 
         return results
 
@@ -167,12 +168,7 @@ class AmiAmiScraper:
         print(f"Scrap request status: {response.status_code}")
         data = response.json()
 
-        # Longer timeout between two different pages (quicker if related items)
-        if code_type == "gcode":
-            sleep(rand_uniform(0, 2))
-        else:
-            sleep(rand_uniform(0, 1))
-
+        sleep(self.scrap_sleep_time)
         return AmiAmiItemResponse(**data)
 
     def _map_item_details_to_final(
