@@ -232,6 +232,8 @@ class AmiAmiScraper:
         try:
             response = self._crawl_item_details(code, code_type)
         except Exception as e:
+            if "429" in str(e):
+                raise Exception("HTTP 429, try again later")
             print(e)
             return results
         if not response.api_success or not response.item:
