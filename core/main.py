@@ -97,6 +97,7 @@ class AmiAmiScraper:
             headers=self.headers,
             impersonate="chrome110",
         )
+        print(f"Crawl request status: {response.status_code}")
         response.raise_for_status()
         data = response.json()
         return AmiAmiItemsResponse(**data)
@@ -163,6 +164,7 @@ class AmiAmiScraper:
             impersonate="chrome110",
         )
         response.raise_for_status()
+        print(f"Scrap request status: {response.status_code}")
         data = response.json()
 
         # Longer timeout between two different pages (quicker if related items)
