@@ -79,3 +79,4 @@ cython_debug/
 
 output/
 web/data/
+web/ignored/
