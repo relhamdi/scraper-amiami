@@ -38,6 +38,7 @@ class ItemCategory1Enum(str, Enum):
     HOUSEHOLD_GOODS = "680"
     AGE_RESTRICTED_PRODUCTS = "8551"
 
+
 class ItemCategory2Enum(str, Enum):
     """
     Possible category 2 values for queries.
@@ -63,7 +64,12 @@ class ItemCategory2Enum(str, Enum):
     JIGSAW_PUZZLES = "200"
     CALENDARS = "10042"
 
+
 class ItemCategory3Enum(str, Enum):
+    """
+    Possible item category 3 values for queries.
+    """
+
     GUNDAM_TOYS = "918"
     ROBOTS = "986"
     TOKUSATSU_TOYS = "952"
