@@ -36,18 +36,16 @@ class ItemCategory1Enum(str, Enum):
     CARD_GAMES = "1"
     TRADING_CARDS = "120"
     HOUSEHOLD_GOODS = "680"
-    AGE_RESTRICTED = "8551"
-
-# todo rename ensuite (figures suffix) et agerestricted_products
+    AGE_RESTRICTED_PRODUCTS = "8551"
 
 class ItemCategory2Enum(str, Enum):
     """
     Possible category 2 values for queries.
     """
 
-    BISHOUJO = "459"
-    CHARACTER = "1298"
-    FOREIGN = "1081"
+    BISHOUJO_FIGURES = "459"
+    CHARACTER_FIGURES = "1298"
+    FOREIGN_FIGURES = "1081"
     DOLLS = "460"
     SCALE_MILITARY = "944"
     CAR_MODELS = "949"

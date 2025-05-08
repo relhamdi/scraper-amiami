@@ -15,12 +15,12 @@ if __name__ == "__main__":
         AmiAmiQueryArgs(
             num_pages=5,
             types=[ItemTypeEnum.NEW],
-            category2=ItemCategory2Enum.CHARACTER,
+            category2=ItemCategory2Enum.CHARACTER_FIGURES,
         ),
         AmiAmiQueryArgs(
             num_pages=1,
             types=[ItemTypeEnum.PRE_ORDER, ItemTypeEnum.PRE_OWNED],
-            category2=ItemCategory2Enum.FOREIGN,
+            category2=ItemCategory2Enum.FOREIGN_FIGURES,
         ),
     ]
 
