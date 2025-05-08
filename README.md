@@ -8,7 +8,7 @@ Created to ease the browsing experience in AmiAmi, this repo contains the scrapi
 
 Supported filters:
 - Query search on name, gcode/scode, JAN code, tags, maker, modeler and description
-- Name, price, release date and item condition sorting
+- Name, gcode, price, release date and item condition sorting
 - Advanced item status (?) filtering (whether the item is pre-owned, a pre-order, new...)
 - Advanced item and box condition filtering
 - Advanced price filtering (min and max borders) on the EURO value
