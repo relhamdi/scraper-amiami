@@ -3,6 +3,7 @@ from typing import List, Optional
 from models.amiami.enums import (
     ItemCategory1Enum,
     ItemCategory2Enum,
+    ItemCategory3Enum,
     ItemSortingEnum,
     ItemTypeEnum,
 )
@@ -21,6 +22,7 @@ class AmiAmiQueryArgs(CustomBaseForbid):
     types: List[ItemTypeEnum] = Field(default_factory=list)
     category1: Optional[ItemCategory1Enum] = None
     category2: Optional[ItemCategory2Enum] = None
+    category3: Optional[ItemCategory3Enum] = None
     sort_key: Optional[ItemSortingEnum] = None
 
     def stringify(self) -> str:

@@ -84,6 +84,7 @@ class AmiAmiScraper:
             "s_keywords": args.keyword or "",
             "s_cate1": args.category1 if args.category1 else "",
             "s_cate2": args.category2 if args.category2 else "",
+            "s_cate3": args.category3 if args.category3 else "",
             "s_sortkey": args.sort_key if args.sort_key else "",
             # "mcode": "",
             # "ransu": "",

@@ -110,7 +110,7 @@ Thanks to marvinody's [repo](https://github.com/marvinody/amiami) for giving me 
 
 ## TODO
 
-- Add support to more AmiAmi categories (cate2 and s_cate_tag)
+- Add support to more AmiAmi categories (s_cate_tag)
 - Improve logging
 - Differentiate a new item and an item with no item_condition extracted (currently both at "")
 - More advanced search bar (exclusion, coma separated searches...)
