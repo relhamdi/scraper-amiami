@@ -90,7 +90,7 @@ The webview is very basic (plain HTML/CSS/JS), but sufficient to browse one or m
 But because the JavaScript must read local files, you need to start a local server to bypass CORS restrictions.
 
 You can use the following command in the root directory:
-```
+```sh
 python -m http.server 8000
 ```
 and then access the page at [localhost:8000/web/index.html](localhost:8000/web/index.html).
