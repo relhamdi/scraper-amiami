@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const yenToEuroMultiplier = 0.006182;   // As of 2025-03-25
+    const yenToEuroMultiplier = 0.006106;   // As of 2025-05-09
     const defaultValue = 'N/A';
 
     const folderPath = 'data/';
