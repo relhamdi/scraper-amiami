@@ -26,13 +26,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Retrieve file names
         const dataText = await dataResponse.text();
-        const filenames = dataText.trim().split('\n').filter(Boolean);
+        const filenames = dataText
+            .split('\n')
+            .map(line => line.trim())
+            .filter(line => line.length > 0 && !line.startsWith('#'));
         console.log(`Found ${filenames.length} JSON files.`);
 
         try {
             // Load JSON files
             for (const filename of filenames) {
-                console.log(`> Loading ${filename}`);
+                console.log(`> Loading '${filename}'`);
                 const response = await fetch(folderPath + filename);
                 if (!response.ok) {
                     throw new Error('Error while loading JSON file.');
