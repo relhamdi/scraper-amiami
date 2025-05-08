@@ -114,3 +114,4 @@ Thanks to marvinody's [repo](https://github.com/marvinody/amiami) for giving me 
 - Improve logging
 - Differentiate a new item and an item with no item_condition extracted (currently both at "")
 - More advanced search bar (exclusion, coma separated searches...)
+- Remove duplicates items in webview if any
