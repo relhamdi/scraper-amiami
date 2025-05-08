@@ -1,7 +1,9 @@
 from typing import List
 
 from models.amiami.enums import (
+    ItemCategory1Enum,
     ItemCategory2Enum,
+    ItemCategory3Enum,
     ItemTypeEnum,
 )
 from models.amiami.utils import AmiAmiQueryArgs
@@ -15,12 +17,17 @@ if __name__ == "__main__":
         AmiAmiQueryArgs(
             num_pages=5,
             types=[ItemTypeEnum.NEW],
-            category2=ItemCategory2Enum.CHARACTER_FIGURES,
+            category1=ItemCategory1Enum.CARD_GAMES,
         ),
         AmiAmiQueryArgs(
             num_pages=1,
             types=[ItemTypeEnum.PRE_ORDER, ItemTypeEnum.PRE_OWNED],
             category2=ItemCategory2Enum.FOREIGN_FIGURES,
+        ),
+        AmiAmiQueryArgs(
+            num_pages=2,
+            types=[ItemTypeEnum.BACK_ORDER, ItemTypeEnum.NEW, ItemTypeEnum.PRE_OWNED],
+            category3=ItemCategory3Enum.GUNDAM_TOYS,
         ),
     ]
 
