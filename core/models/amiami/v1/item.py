@@ -129,6 +129,8 @@ class AmiAmiItemDetailModel(CustomBaseForbid):
     has_preorder_bonus: bool = Field(alias="preorder_bonus_flg")
     is_on_sale: bool = Field(alias="onsale_flg")
     is_preowned_sale: bool = Field(alias="preowned_sale_flg")
+    youtube: Optional[str] = None
+    movie: Optional[str] = None
 
     gname_sub: str
     sname_simple: str
