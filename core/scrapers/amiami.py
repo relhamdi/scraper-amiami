@@ -8,6 +8,7 @@ from config import (
     AMIAMI_API_ROOT,
     AMIAMI_USER_AGENT,
     AMIAMI_USER_KEY,
+    BROWSER,
     DATA_LIST_FILE,
     ITEMS_PER_PAGE,
     OUTPUT_DIR,
@@ -100,7 +101,7 @@ class AmiAmiScraper:
             url,
             params=params,
             headers=self.headers,
-            impersonate="chrome110",
+            impersonate=BROWSER,
         )
         print(f"Crawl request status: {response.status_code}")
         response.raise_for_status()
@@ -166,7 +167,7 @@ class AmiAmiScraper:
             url,
             params=params,
             headers=self.headers,
-            impersonate="chrome110",
+            impersonate=BROWSER,
         )
         response.raise_for_status()
         print(f"Scrap request status: {response.status_code}")
